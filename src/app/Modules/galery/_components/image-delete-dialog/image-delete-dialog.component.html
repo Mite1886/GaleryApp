@@ -1,0 +1,6 @@
+<h1 mat-dialog-title>Delete image?</h1>
+<div mat-dialog-content>Are you sure you want to delete image with id {{data.imageObject.id}}</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="closeDialog()">Cancel</button>
+    <button mat-button (click)="deleteImage()">Delete</button>
+</div>

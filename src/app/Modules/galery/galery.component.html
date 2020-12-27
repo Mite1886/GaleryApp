@@ -1,0 +1,13 @@
+<div class="row col-12 my-4 p-0 mx-0" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()">
+    <div class="image col-12 py-2" *ngFor="let image of imagesList">
+        <image-card [image]="image"></image-card>
+    </div>
+</div>
+<div class="footer">
+    <button mat-button (click)="openAddDialog()">
+        <span class="material-icons icon-size">
+            add_circle
+        </span>
+    </button>
+</div>

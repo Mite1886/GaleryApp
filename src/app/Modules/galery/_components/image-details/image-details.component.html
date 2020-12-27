@@ -1,0 +1,36 @@
+<div class="container">
+
+    <div class="row" (click)="backToHome()">
+        <span class="material-icons icon-style">
+            arrow_back_ios_new
+        </span>
+        <span class="pt-1 h5">Back to Home</span>
+    </div>
+    <div class="content" *ngIf="imageDto">
+        <h1 class="my-4">{{imageDto.title}}</h1>
+        <div class="row">
+
+            <div class="col-md-7">
+                <img class="img-fluid" src={{imageDto.url}} alt="{{imageDto.title}}">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3"><b>{{imageDto.title}}</b></h3>
+                <h3 class="my-3">Image Details</h3>
+                <li>Image Id : {{imageDto.id}}</li>
+                <li>Album Id : {{imageDto.albumId}}</li>
+                <li>thumbnailUrl : <a [href]="imageDto.thumbnailUrl" target="_blank">{{imageDto.thumbnailUrl}}</a>
+                </li>
+                <li>Full size image Url : <a [href]="imageDto.url" target="_blank">{{imageDto.url}}</a>
+                </li>
+                <br />
+                <button mat-raised-button color="warn" (click)="deleteImage()">Delete</button>
+                <button mat-raised-button (click)="openEditDialog()">Edit</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->

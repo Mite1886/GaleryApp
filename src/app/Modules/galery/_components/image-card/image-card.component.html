@@ -1,0 +1,13 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title> {{image.title}} </mat-card-title>
+    </mat-card-header>
+    <div class="text-center py-2">
+        <img mat-card-image src={{image.thumbnailUrl}} alt="{{image.title}}" (click)="showImageDetails(image.id)"
+            class="image-style">
+    </div>
+    <mat-card-actions>
+        <button mat-button (click)="openEditDialog()">Edit</button>
+        <button (click)="deleteImage()" mat-button>Delete</button>
+    </mat-card-actions>
+</mat-card>
