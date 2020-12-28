@@ -24,8 +24,8 @@
                 <li>Full size image Url : <a [href]="imageDto.url" target="_blank">{{imageDto.url}}</a>
                 </li>
                 <br />
-                <button mat-raised-button color="warn" (click)="deleteImage()">Delete</button>
-                <button mat-raised-button (click)="openEditDialog()">Edit</button>
+                <button mat-raised-button (click)="openEditDialog()" class="float-left">Edit</button>
+                <button mat-raised-button color="warn" (click)="deleteImage()" class="float-right">Delete</button>
             </div>
 
 
